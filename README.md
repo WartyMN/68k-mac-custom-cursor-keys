@@ -30,21 +30,36 @@ After installing and restarting your Mac, it will be active. Whenever the chosen
 - Remapped keys: =, [, ], \
 
 ```
-       +------+
-       | +  = |
-       |      |
-       |  UP  |
-+--------------------+
-| [  { | ]  } | \  | |
-|      |      |      |
-| LEFT | DOWN | RIGHT|
-+--------------------+
+            +------+
+            | +  = |
+            |      |
+            |  UP  |
+     +--------------------+
+     | [  { | ]  } | \  | |
+     |      |      |      |
+     | LEFT | DOWN | RIGHT|
+     +--------------------+
 ```
 
-## Installation
-1. Get it onto your Mac somehow
-2. Expand the .SIT file
-3. Drop the “Custom Cursors” INIT (extension) on your system folder. For System 7+, the Mac will automatically move it into your System Extensions folder.
+## Installation – System 4.x - 7.5.5
+1. Download from local info-mirror or ask for a floppy from your local Mac user group (MUG).
+2. Expand the .sit file
+3. Locate the “Custom Cursors” INIT file in the “Install” folder. It will look like a jigsaw puzzle piece with cursor keys in it.
+4. Drag the “Custom Cursors” INIT file onto your System Folder. For System 7+, the Mac will automatically move it into your System Extensions folder.
+5. Restart your Mac.
+
+## Installation – System 1.0 - 3.x
+Note: Standalone INIT files did not exist prior to System 4. To install an INIT in System 1, 2, or 3, you need to copy the INIT code directly into your System file using ResEdit. If you accidentally do anything wrong, you could permanently wreck that System file, so make a backup before proceeding.
+1. Get a copy of the unexpanded archive onto your mighty 400K-floppy powered Mac. Somehow, I leave that up to you.
+2. Locate the “Custom Cursors low mem” INIT file in the “Install - low mem” folder. It will look like a generic icon because the low memory version does not include a custom icon.
+3. Open ResEdit.
+4. From within ResEdit, open the “Custom Cursors low mem” file.
+5. From within ResEdit, open the “System” file. You did make a backup of your System file, right? Good.
+6. Locate and double-click on the “INIT” resource within your System file. A popup window will be displayed listing all the INITs already in your system. A maximum of 32 INITs can be loaded, so if you already have 32, you need to delete one before installing Custom Cursors.
+7. Note the highest-numbered INIT file (e.g, “3”). Switch to the Custom Cursors low mem file, and double-click on the “INIT” resource. Change the id to the next available resource ID in your system. (e.g., “4”).
+8. Copy the INIT row from Custom Cursors low mem, and paste it into the INIT resource in your system.
+9. Save your System file and quit ResEdit.
+10. Restart your Mac. If all went well, Custom Cursors will now be active. It will not display a badge (icon) on startup, to save precious, precious RAM. Enjoy!
 
 ## Customizable behavior
 
@@ -113,6 +128,7 @@ No. Nothing is UI-configurable, in the interest of keeping size to a minimum. It
 ### Which systems is it compatible with?
 Good question. So far, it has been tested with:
 - Macintosh Plus with 4MB, and 6.0.8
+- Amiga 3000 running A-Max 2.5, with emulated Macintosh Plus with 10MB and System 6.0.8
 - Basilisk II - 7.5.5
 - Mini vMac - various Mac II and Mac Plus configurations. Also tested with System 1.1g and a Mac 128K image. 
 - One user has reported it worked as expected on their actual Mac 128K with early (1 or 2) version of System.
