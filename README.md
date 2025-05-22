@@ -107,7 +107,7 @@ Each key to be remapped is represented by 1 byte in the code. The keys are in th
 4. Save and restart.
 
 ### Changing the value mapped:
-I don’t really know if anyone will ever do this, but I made it theoretically possible just in case. I’m not going to write it up, but see the source code comments for more info. Hint: each key to remap needs a 2-byte character-then-key code; the 8 bytes start after the “<<KEYMAP” marker. In the example above, “4D1E” is the first remap, with “4D” being the keyboard hardware key value for the “LEFT” key on the Mac keypad, and “1E” being the Mac ASCII character for cursor up. Depending on which key you are remapping, you might get away with putting in 00 for the first byte of each remap.
+I don’t really know if anyone will ever do this, but I made it theoretically possible just in case. I’m not going to write it up, but see the source code comments for more info. Hint: each key to remap needs a 2-byte character-then-key code; the 8 bytes start after the “<<KEYMAP” marker. In the example above, “4D1E” is the first remap, with “4D” being the keyboard hardware key value for the “LEFT” key on the Mac keypad, and “1E” being the Mac ASCII character for cursor up. Depending on which key you are remapping, you might get away with putting in 00 for the first byte of each remap.
 
 ## FAQs from Usenet
 
